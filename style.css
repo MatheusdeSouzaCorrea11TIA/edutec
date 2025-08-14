@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'sans-serif';
+}
+
+:root {
+    --light-brown: #E9D5C4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--light-brown);
+    margin-inline: 1rem;
+
+    .links .nav-menu-list {
+        display: flex;
+        margin-right: 3rem;
+        li {
+            margin-inline: 1rem;
+        }
+    }
+}
