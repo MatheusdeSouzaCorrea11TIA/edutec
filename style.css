@@ -7,6 +7,7 @@
 
 :root {
     --bg-black: #171619;
+    --blur-gray: rgba(200, 200, 200, 0.22);
     --light-brown: #E9D5C4;
     --white: #FFF;
 }
@@ -23,6 +24,7 @@ header {
     border-bottom: 2px solid var(--light-brown);
     margin-inline: 1rem;
     height: 7.5rem;
+    z-index: 1;
 
     .links .nav-menu-list {
         display: flex;
@@ -41,10 +43,32 @@ header {
 }
 
 main {
-
+    display: flex;
+    flex-direction: column;
 
     .tour {
         /*Mudar aqui*/
-        background-image: url(./assets/images/arara.png);
+        display: flex;
     }    
+}
+
+.main {
+    background-image: url(./assets/images/fundohome.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+}
+
+.blur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--blur-gray);
+    width: 50%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+
+    h1, p {
+        margin-left: 4.5rem;
+    }
 }
