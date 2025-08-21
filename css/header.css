@@ -4,7 +4,8 @@ header {
     align-items: center;
     border-bottom: 2px solid var(--light-brown);
     margin-inline: 1rem;
-    height: 7.5rem;
+    height: 10rem;
+    font-size: 14px;
 
     .links .nav-menu-list {
         display: flex;
