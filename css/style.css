@@ -1,18 +1,14 @@
 @import url(./header.css);
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', 'sans-serif';
-}
+@import url(./base.css);
 
 :root {
     font-size: 62.5%;
 
     --bg-black: #171619;
     --light-brown: #E9D5C4;
+    --lighter-brown: #F4E2CE;
     --blur-gray: rgb(199, 199, 199,0.22);
+    --gray-purple: #43404A;
     --orange: #DAA062;
     --yelled-gray: #727065;
     --almost-lime: #A2BF46;
@@ -166,6 +162,31 @@ main {
             max-width: 300px;
             font-size: 12.5px;
             margin-block: 2.5rem;
+        }
+    }
+
+    .siema {
+        display: flex;
+        gap: 5px;
+        max-width: 400px;
+        height: 400px;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+
+            button {
+                background: none;
+                color: var(--white);
+                border: 2px solid var(--lighter-brown);
+                border-radius: 10rem;
+                padding: 0.5rem;
+                max-width: 10rem;
+            }
         }
     }
 }

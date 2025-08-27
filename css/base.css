@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'sans-serif';
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-black: #171619;
+    --light-brown: #E9D5C4;
+    --lighter-brown: #F4E2CE;
+    --blur-gray: rgb(199, 199, 199,0.22);
+    --gray-purple: #43404A;
+    --orange: #DAA062;
+    --yelled-gray: #727065;
+    --almost-lime: #A2BF46;
+    --forest-green: #606C38;
+    --white: #FFF;
+}
