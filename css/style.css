@@ -7,6 +7,7 @@
     --bg-black: #171619;
     --light-brown: #E9D5C4;
     --lighter-brown: #F4E2CE;
+    --base-yellow: #FEFAE0;
     --blur-gray: rgb(199, 199, 199,0.22);
     --gray-purple: #43404A;
     --orange: #DAA062;
@@ -40,7 +41,7 @@ main {
     .main {
         height: 40rem;
         width: 100%;
-        background-image: url(../assets/images/home-bg.png);
+        background-image: url(../assets/home/home-bg.png);
         background-position: center;
         background-size: cover;
         .text-box {
@@ -163,18 +164,38 @@ main {
             font-size: 12.5px;
             margin-block: 2.5rem;
         }
+        
+        .text-box {
+            display: flex;
+            flex-direction: column;
+
+            button {
+                padding: 10px;
+                margin-inline: auto;
+                outline: none;
+                border: none;
+                background-color: var(--base-yellow);
+                color: var(--forest-green);
+            }
+        }
     }
 
     .siema {
+        border: red solid 1px;
+    }
+
+    .paginas .siema {
         display: flex;
-        gap: 5px;
-        max-width: 400px;
+        gap: 3rem;
+        max-width: 750px;
         height: 400px;
+        font-size: 12px;
 
         .item {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 2rem;
             height: 300px;
             width: 300px;
             border-radius: 10px;
@@ -188,6 +209,14 @@ main {
                 max-width: 10rem;
             }
         }
+    }
+
+    .canais .siema {
+        display: flex;
+        gap: 3rem;
+        max-width: 400px;
+        height: 400px;
+        font-size: 12px;
     }
 }
 
