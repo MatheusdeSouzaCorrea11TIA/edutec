@@ -1,0 +1,31 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--light-brown);
+    height: 10rem;
+    max-width: 124rem;
+    font-size: 14px;
+
+    .links .nav-menu-list {
+        display: flex;
+        margin-right: 3rem;
+    }
+
+    .nav-menu-item {
+        list-style-type: none;
+        margin-inline: 1rem;
+
+        a {
+            color: var(--white);
+            text-decoration: none;
+        }
+    }
+}

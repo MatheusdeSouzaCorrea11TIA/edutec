@@ -1,0 +1,114 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    background: #171518;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #1e1c20;
+    position: sticky;
+    top: 0;
+  }
+  
+  .header .logo {
+    font-size: 24px;
+  }
+  
+  .header .menu a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .header .menu a:hover {
+    color: #a1bf46;
+  }
+  
+  /* INTRO */
+  .intro {
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  .intro h1 {
+    font-size: 36px;
+  }
+  
+  .intro h1 span {
+    color: #a1bf46;
+  }
+  
+  .intro p span {
+    color: #a1bf46;
+  }
+  
+  /* CARDS */
+  .cards {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+  }
+  
+  .cards h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #a1bf46;
+  }
+  
+  .card {
+    background: #59584f;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px #a1bf46;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .card small {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .card a {
+    color: #a1bf46;
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* FOOTER */
+  .footer {
+    background: #1e1c20;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
