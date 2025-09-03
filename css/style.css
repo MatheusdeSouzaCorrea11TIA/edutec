@@ -180,13 +180,8 @@ main {
         }
     }
 
-    .siema {
-        border: red solid 1px;
-    }
-
-    .paginas .siema {
+    .paginas .siema{
         display: flex;
-        gap: 3rem;
         max-width: 750px;
         height: 400px;
         font-size: 12px;
@@ -196,9 +191,8 @@ main {
             flex-direction: column;
             justify-content: space-between;
             gap: 2rem;
-            height: 300px;
-            width: 300px;
             border-radius: 10px;
+            padding-right: 2rem;
 
             button {
                 background: none;
@@ -214,9 +208,31 @@ main {
     .canais .siema {
         display: flex;
         gap: 3rem;
-        max-width: 400px;
-        height: 400px;
+        max-width: 750px;
+        height: 300px;
         font-size: 12px;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 2px solid var(--gray-purple);
+            border-radius: 10px;
+            padding: 10px;
+
+            img {
+                height: 175px;
+                border: var(--orange) 2px solid;
+                border-radius: 50%;
+            }
+
+            a {
+                margin-block: auto;
+                color: var(--white);
+                text-decoration: none;
+                font-size: 14px;
+            }
+        }
     }
 }
 
@@ -229,7 +245,14 @@ main {
     align-items: center;
 
     .links {
-        
+        display: flex;
+        align-items: center;
+
+        div {
+            background-color: var(--white);
+            height: 15px;
+            width: 2px;
+        }
     }
 }
 
