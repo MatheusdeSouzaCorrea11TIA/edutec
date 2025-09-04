@@ -1,22 +1,6 @@
 @import url(./header.css);
 @import url(./base.css);
 
-:root {
-    font-size: 62.5%;
-
-    --bg-black: #171619;
-    --light-brown: #E9D5C4;
-    --lighter-brown: #F4E2CE;
-    --base-yellow: #FEFAE0;
-    --blur-gray: rgb(199, 199, 199,0.22);
-    --gray-purple: #43404A;
-    --orange: #DAA062;
-    --yelled-gray: #727065;
-    --almost-lime: #A2BF46;
-    --forest-green: #606C38;
-    --white: #FFF;
-}
-
 body {
     background: var(--bg-black);
     color: var(--white);
@@ -91,7 +75,8 @@ main {
                 font-size: 1.25rem;
             }
 
-            button {
+            a {
+                font-size: 14px;
                 color: var(--white);
                 background-color: var(--forest-green);
                 height: 4rem;
@@ -170,7 +155,7 @@ main {
             flex-direction: column;
 
             button {
-                padding: 10px;
+                padding: 8px 25px;
                 margin-inline: auto;
                 outline: none;
                 border: none;
@@ -247,11 +232,17 @@ main {
     .links {
         display: flex;
         align-items: center;
+        margin-inline: auto;
 
         div {
+            margin-inline: 1rem;
             background-color: var(--white);
             height: 15px;
             width: 2px;
+        }
+
+        p {
+            margin-right: 0.5rem;
         }
     }
 }

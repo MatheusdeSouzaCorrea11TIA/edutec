@@ -1,0 +1,86 @@
+@import url(./header.css);
+@import url(./base.css);
+
+
+:root {
+    font-size: 62.5%;
+
+    --bg-black: #171619;
+    --light-brown: #E9D5C4;
+    --lighter-brown: #FEFAE1;
+    --blur-gray: rgb(199, 199, 199,0.22);
+    --gray-purple: #43404A;
+    --orange: #DAA062;
+    --yelled-gray: #727065;
+    --almost-lime: #A2BF46;
+    --forest-green: #606C38;
+    --white: #FFF;
+}
+
+body {
+    background-image: url(../assets/vida-selvagem/BG.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    
+    section:not(:first-child) {
+        max-width: 100rem;
+        margin-block: 3rem;
+    }
+
+    .main {
+        margin-block: 4rem;
+        height: 40rem;
+        width: 100%;
+
+        .text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+            height: 100%;
+            width: 50%;
+
+            h1 {
+                color: var(--lighter-brown);
+                font-size: 72px;
+                margin-left: 6rem;
+                span {
+                    color: var(--almost-lime);
+                    margin-left: 3rem;
+                }
+            }
+
+            p {
+                color: var(--white);
+                font-size: 16px;
+                font-weight: 700;
+                margin-left: 6rem;
+            }
+        }
+    }
+
+    .animais {
+        border: 1px solid red;
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            display: flex;
+
+            img, div {
+                width: 30rem;
+            }
+        }
+    }
+}
