@@ -7,6 +7,11 @@
     font-family: 'Inter', 'sans-serif';
 }
 
+body {
+    background: var(--bg-black);
+    overflow-x: hidden;
+}
+
 :root {
     font-size: 62.5%;
 
@@ -21,5 +26,9 @@
     --forest-green: #606C38;
     --dark-green: #2B311A;
     --white: #FFF;
+}
+
+.blur {
+    backdrop-filter: blur(5px);
 }
 

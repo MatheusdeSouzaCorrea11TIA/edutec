@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/siema.min.js" defer></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/carrosel.js" defer></script>
     <title>EDUTEC - Home</title>
 </head>
 <body>
     <header>
-        <img src="./assets/images/icons/logo.svg" alt="Logo">
+        <a href="./index.html"><img src="./assets/images/icons/logo.svg" alt="Logo"></a>
         <div class="links">
             <ul class="nav-menu-list">
                 <li class="nav-menu-item">
@@ -36,6 +40,8 @@
                 </li>
             </ul>
         </div>
+
+        <img src="./assets/elementos/detalhe-header.svg" alt="" class="detalhe">
     </header>
 
     <main>
@@ -61,7 +67,7 @@
                 <p>Sinta-se livre para explorar as maravilhas que a natureza nos oferece e que são apresentadas no nosso site!</p>
                 <p>Use-o como guia de estudo para descobrir e aprender diversos tópicos introduzidos na zoologia, teste seus conhecimentos no nosso jogo "ZaHoot!", seja bem-vindo e bons estudos!</p>
 
-                <a id="jogar">Jogar</a>
+                <a href="./jogo.html">Jogar</a>
             </div>
         </section>
         <hr>
@@ -76,84 +82,88 @@
 
                 <p>Explore brevemente alguns dos temas que serão retratados aqui!</p>
 
-                <button id="saiba-mais-selvagem">Saiba mais</button>
+                <a href="./vidaselvagem.html">Saiba mais</a>
             </div>
         </section>
         <hr>
 
         <section class="paginas">
-            <div class="siema">
-                <div class="item">
-                    <img src="./assets/home/carrosel - 1 - habitats.png" alt="">
-                    <p><strong>Habitats Naturais</strong></p>
-                    <p>Descubra quais animais possívelmente vivem onde você mora!</p>
-
-                    <button id="saiba-mais">Saiba mais</button>
-                </div>
-
-                <div class="item">
-                    <img src="./assets/home/carrosel - 2 -vida-marinha.png" alt="">
-                    <p><strong>Vida marinha</strong></p>
-                    <p>Descubra os segredos que o fundo do mar esconde!</p>
-
-                    <button id="saiba-mais">Saiba mais</button>
-                </div>
-
-                <div class="item">
-                    <img src="./assets/home/carrosel - 3 - curiosidades.png" alt="">
-                    <p><strong>Curiosidades</strong></p>
-                    <p>Curiosidades fascinantes sobre os animais</p>
-
-                    <button id="saiba-mais">Saiba mais</button>
-                </div>
-
-                <div class="item">
-                    <img src="./assets/home/carossel - 4 - classificacoes.png" alt="">
-                    <p><strong>Classificações</strong></p>
-                    <p>Conheça todos os pontos da taxonomia</p>
-
-                    <button id="saiba-mais">Saiba mais</button>
-                </div>
-
-                <div class="item">
-                    <img src="./assets/home/carossel - 5 - zahoot.png" alt="">
-                    <p><strong>ZaHoot</strong></p>
-                    <p>Teste seu aprendizado de um modo competitivo aqui!</p>
-
-                    <button id="saiba-mais">Saiba mais</button>
+            <button class="button-prev">←</button>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide item">
+                        <img src="./assets/home/carrosel - 1 - habitats.png" alt="">
+                        <p><strong>Habitats Naturais</strong></p>
+                        <p>Descubra quais animais possívelmente vivem onde você mora!</p>
+    
+                        <a href="./habitats.html">Saiba mais</a>
+                    </div>
+    
+                    <div class="swiper-slide item">
+                        <img src="./assets/home/carrosel - 2 -vida-marinha.png" alt="">
+                        <p><strong>Vida marinha</strong></p>
+                        <p>Descubra os segredos que o fundo do mar esconde!</p>
+    
+                        <a href="./vidamarinha.html">Saiba mais</a>
+                    </div>
+    
+                    <div class="swiper-slide item">
+                        <img src="./assets/home/carrosel - 3 - curiosidades.png" alt="">
+                        <p><strong>Curiosidades</strong></p>
+                        <p>Curiosidades fascinantes sobre os animais</p>
+    
+                        <a href="./curiosidades.html">Saiba mais</a>
+                    </div>
+    
+                    <div class="swiper-slide item">
+                        <img src="./assets/home/carossel - 4 - classificacoes.png" alt="">
+                        <p><strong>Classificações</strong></p>
+                        <p>Conheça todos os pontos da taxonomia</p>
+    
+                        <a href="./classificacoes.html">Saiba mais</a>
+                    </div>
+    
+                    <div class="swiper-slide item">
+                        <img src="./assets/home/carossel - 5 - zahoot.png" alt="">
+                        <p><strong>ZaHoot</strong></p>
+                        <p>Teste seu aprendizado de um modo competitivo aqui!</p>
+    
+                        <a href="./jogo.html">Saiba mais</a>
+                    </div>
                 </div>
             </div> 
+            <button class="button-next">→</button>
         </section>
         <hr>
 
         <section class="canais">
-            <div class="siema">
-                <div class="item">
-                    <img src="./assets/images/canais/samuel.png" alt="">
-                    <a href=""><strong>Biologia com Samuel Cunha</strong></a>
-                </div>
+            <div class="swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide item">
+                        <img src="./assets/images/canais/guilherme.png" alt="">
+                        <a href=""><strong>Prof. Guilherme Goulart - Biologia</strong></a>
+                    </div>
 
-                <div class="item">
-                    <img src="./assets/images/canais/guilherme.png" alt="">
-                    <a href=""><strong>Prof. Guilherme Goulart - Biologia</strong></a>
-                </div>
+                    <div class="swiper-slide item">
+                        <img src="./assets/images/canais/umberto.png" alt="">
+                        <a href=""><strong>Prof. Guilherme Goulart - Biologia</strong></a>
+                    </div>
 
-                <div class="item">
-                    <img src="./assets/images/canais/umberto.png" alt="">
-                    <a href=""><strong>Prof. Guilherme Goulart - Biologia</strong></a>
-                </div>
+                    <div class="swiper-slide item">
+                        <img src="./assets/images/canais/descomplica.png" alt="">
+                        <a href=""><strong>Descomplica</strong></a>
+                    </div>
 
-                <div class="item">
-                    <img src="./assets/images/canais/descomplica.png" alt="">
-                    <a href=""><strong>Descomplica</strong></a>
-                </div>
-
-                <div class="item">
-                    <img src="./assets/images/canais/brasilescola.png" alt="">
-                    <a href=""><strong>Brasil Escola Oficial</strong></a>
+                    <div class="swiper-slide item">
+                        <img src="./assets/images/canais/brasilescola.png" alt="">
+                        <a href=""><strong>Brasil Escola Oficial</strong></a>
+                    </div>
+                    <div class="swiper-slide item">
+                        <img src="./assets/images/canais/samuel.png" alt="">
+                        <a href=""><strong>Biologia com Samuel Cunha</strong></a>
+                    </div>
                 </div>
             </div>
-            <div>
         </section>
         <hr>
 

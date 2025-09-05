@@ -28,4 +28,43 @@ header {
             text-decoration: none;
         }
     }
+
+    .detalhe {
+        position: absolute;
+        right: 0;
+        top: 15rem;
+    }
+}
+
+.rodape {
+    height: 10rem;
+    width: 128rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        margin-inline: auto;
+
+        div {
+            margin-inline: 1rem;
+            background-color: var(--white);
+            height: 15px;
+            width: 2px;
+        }
+
+        p {
+            margin-right: 0.25rem;
+        }
+
+        a {
+            color: var(--white);
+            margin-left: 0.75rem;
+            text-decoration: none;
+        }
+    }
 }
