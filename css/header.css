@@ -9,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--light-brown);
+    border-bottom: 2px solid var(--orange);
     height: 10rem;
     max-width: 124rem;
     font-size: 14px;

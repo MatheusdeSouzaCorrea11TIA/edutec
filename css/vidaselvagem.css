@@ -68,19 +68,60 @@ main {
     }
 
     .animais {
-        border: 1px solid red;
-        max-width: 750px;
+        width: 75rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        div {
+        .container {
             display: flex;
 
-            img, div {
-                width: 30rem;
+            div {
+                width: 50%;
+                height: 20rem;
             }
+
+            .img-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20rem;
+                margin-inline: auto;
+                padding: 1rem;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .text-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+                color: var(--white);
+            }
+
+            .light {
+                border-left: 15px solid var(--almost-lime);
+                background-color: var(--forest-green);
+            }
+            .dark {
+                border-right: 15px solid var(--almost-lime);
+                background-color: var(--dark-green);
+            }
+        }
+    }
+
+    .graficos {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid red;
+
+        .text-box {
+            color: var(--white);
         }
     }
 }

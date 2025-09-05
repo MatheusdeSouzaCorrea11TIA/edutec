@@ -31,27 +31,52 @@ h1 {
     font-size: 72px;
     margin-inline: auto;
     font-size: 48px;
+
 }
 
 h2 {
     color: var(--almost-lime);
+    font-size: 30px;
 }
 
 p {
     color: var(--white);
+    font-size: 17px;
 }
 
 .game {
+    border: 2px solid red;
+    height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
 }
 
 .containers {
     display: flex;
-
+    margin-block: auto;
+    text-align: center;
     div{
         width: 50%;
     }
+
+    img {
+        height: 144px;
+    }
+
+    button {
+        border: 2px solid var(--light-brown);
+        padding: 10px 28px;
+        background: var(--bg-black);  
+        color: var(--lighter-brown);
+        font-size: 1.5rem; 
+      }
+}
+
+.numero1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 10px;
 }
