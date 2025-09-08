@@ -45,8 +45,9 @@ p {
 }
 
 .game {
-    border: 2px solid red;
     height: 70vh;
+    width: 80vw;
+    margin-top: 7.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -55,21 +56,32 @@ p {
     display: flex;
     margin-block: auto;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+
     div{
-        width: 50%;
+        height: fit-content;
+        width: 100%;
     }
 
     img {
         height: 144px;
     }
 
-    button {
+    input {
         border: 2px solid var(--light-brown);
-        padding: 10px 28px;
+        padding: 1rem;
+        width: 25rem;
         background: var(--bg-black);  
         color: var(--lighter-brown);
         font-size: 1.5rem; 
-      }
+        outline: none;
+    }
+
+    input:focus {
+        outline: none;
+    }
 }
 
 .numero1 {
@@ -78,5 +90,34 @@ p {
     justify-content: center;
     align-items: center;
     margin: auto;
-    height: 10px;
+    gap: 2.5rem;
+
+    p {
+        max-width: 35rem;
+    }
+}
+
+.aprendeu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 2rem;
+
+    p {
+        span {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--lime);
+        }
+    }
+
+    a {
+        background: var(--forest-green);
+        padding: 1rem 4rem;
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
 }

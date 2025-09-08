@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EDUTEC - ZaHoot!</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/jogo.css">
+  <script src="../js/jogo.js" defer></script>
+  <link rel="stylesheet" href="../css/jogo.css">
 </head>
 <body>
   <header>
-    <a href="./index.html"><img src="./assets/images/icons/logo.svg" alt="Logo"></a>
+    <a href="./index.html"><img src="../assets/images/icons/logo.svg" alt="Logo"></a>
     <div class="links">
         <ul class="nav-menu-list">
             <li class="nav-menu-item">
@@ -24,7 +24,7 @@
             <li class="nav-menu-item">
                 <a href="./curiosidades.html" id="mais">
                     Mais
-                    <img src="./assets/images/icons/Arrow.svg" alt="">
+                    <img src="../assets/images/icons/Arrow.svg" alt="">
                 </a>
             </li>
 
@@ -33,10 +33,14 @@
                     Jogo
                 </a>
             </li>
+
+            <li class="nav-menu-item">
+                <a href="./rank.html" id="mais">
+                    rank
+                </a>
+            </li>
         </ul>
     </div>
-
-    <img src="./assets/elementos/detalhe-header.svg" alt="" class="detalhe">
 </header>
 
   <main>
@@ -45,29 +49,25 @@
 
     <div class="containers">
       <div class="numero1">
-        <img src="./assets/elementos/Icone -  Profile Picture.svg" alt="Pessoinha">
-        <button>Login</button>
+        <img src="../assets/elementos/Icone -  Profile Picture.svg" alt="Pessoinha">
+        <input type="text" placeholder="Digite seu nome..." id="name">
         <h2>Seja o Número 1!</h2>
 
-        <p>Faça login para salvar sua <br>
-          pontuação e receber novas <br>
-          informações!
+        <p>Digite seu nome para salvar sua pontuação! e receber novas informações!
         </p>
       </div>
   
       <div class="aprendeu">
-        <h2>Já aprendeu o suficiente?</h2>
-        <h2>Acha que os conteúdos são difíceis?</h2>
+        <h2>Já aprendeu o suficiente?<br>Acha que os conteúdos são difíceis?</h2>
 
         <p>
-          Experimente uma partida do nosso jogo: <br>
-          ZaHoot!! <br>
-          Nós prometemos uma ‘gameplay’ intuitiva e que <br>
+          Experimente uma partida do nosso jogo: <span>ZaHoot!!</span><br>
+          Nós prometemos uma gameplay intuitiva e que <br>
           tem como objetivo desafiar o que foi absorvido <br>
           na sua experiência com nosso site. <br>  
         </p>
 
-        <button>Jogar</button>
+        <a href="./gameplay.html" id="play">Jogar</a>
       </div>
     </div>
   </section>

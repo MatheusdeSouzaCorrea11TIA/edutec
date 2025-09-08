@@ -2,7 +2,7 @@ function createSlider() {
     let swippers = []
 
     if (window.location.pathname == "/index.html") {
-        pagsSwipper = new Swiper('.swiper', {
+        new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
             loop: false,
@@ -12,7 +12,7 @@ function createSlider() {
             spaceBetween: 30,
             allowTouchMove: false,
           });
-        pagsSwipper = new Swiper('.swiper2', {
+        new Swiper('.swiper2', {
             // Optional parameters
             direction: 'horizontal',
             loop: false,
