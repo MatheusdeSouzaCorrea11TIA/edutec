@@ -23,16 +23,12 @@ body {
     font-family: sans-serif;
 }
 
-h1 {
+#descricao {
     color: var(--white);
-    font-size: 4.2rem;
-    margin-bottom: 4rem;
-}
-
-p {
-    color: var(--white);
-    font-size: 1.4rem;
+    font-size: 2rem;
+    font-weight: 600;
     line-height: 1.6;
+    max-width: 50rem;
 }
 
 main {
@@ -71,7 +67,7 @@ main {
 }
     
 .container img {
-    max-width: 60rem;
+    max-width: 22.5rem;
     height: auto;
     object-fit: contain;
 }
@@ -122,13 +118,18 @@ main {
 }
 
 .nivel {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
     color: var(--white);
     font-weight: 600;
+
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+.hidden {
+    display: none;
 }

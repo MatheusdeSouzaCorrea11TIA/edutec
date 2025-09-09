@@ -14,13 +14,20 @@ header {
     max-width: 124rem;
     font-size: 14px;
 
+    .logo {
+        width: 8rem;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
     .links .nav-menu-list {
         display: flex;
         margin-right: 3rem;
     }
 
     .nav-menu-item {
-        list-style-type: none;
         margin-inline: 1rem;
 
         a {
@@ -34,6 +41,45 @@ header {
         right: 0;
         top: 15rem;
     }
+
+    #popup {
+        background-color: #0000008c;
+        border: 2px solid var(--orange);
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        right: 0.75rem;
+        top: 7rem;
+        z-index: 99;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: space-between;
+            padding: 0.75rem;
+
+            li {
+                margin-block: 0.5rem;
+            }
+
+            a {
+                color: var(--white);
+                text-decoration: none;
+            }
+
+            hr {
+                width: 80%;
+                border: 1px solid var(--orange);
+            }
+        }
+    }
+
+    .hiddenPopup {
+        display: none;
+    }
 }
 
 .rodape {
@@ -43,6 +89,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    img {
+        width: 8rem;
+    }
 
     .links {
         color: var(--white);

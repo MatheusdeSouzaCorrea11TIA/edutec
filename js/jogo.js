@@ -12,5 +12,5 @@ play.addEventListener("click", (e) => {
         return
     }
 
-    alert("Digite um nome válido, apenas com letras")
+    alert("O nome deve ser preenchido, sem caracteres especiais ou numeros")
 })
