@@ -1,0 +1,63 @@
+@import url(./base.css);
+@import url(./header.css);
+
+body {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+main {
+    margin-top: 15rem;
+    border: 2px solid red;
+    display: flex;
+    height: 70rem;
+    width: 100rem;
+
+    section {
+        margin-top: 7rem;
+        width: 40rem;
+        height: 50rem;
+        
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%, 0 100%);
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+
+            .foto {
+                border: solid 2px red;
+                margin-block: 8rem 2rem;
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .icones {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+    .matheus-box {
+        background: var(--matheus-color);
+    }
+    .joao-box {
+        background: var(--joao-color);
+    }
+    .eduardo-box {
+        background: var(--eduardo-color);
+    }
+    .ph-box {
+        background: var(--phelipe-color);
+    }
+    .hianna-box {
+        background: var(--hianna-color);
+    }
+}

@@ -2,6 +2,7 @@
 @import url(./base.css);
 
 body {
+    background-color: var(--dark-blue);
     background-image: linear-gradient(rgba(6, 48, 53, 0.5),rgba(3, 28, 31, 1)), url(../assets/vida-marinha/tubaro.jpg);
     background-position: center;
     background-size: cover;
@@ -41,7 +42,7 @@ main {
                 margin-top: 4rem;
                 margin-left: 10rem;
                 max-width: 50rem;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 color: var(--white);
             }
         }
@@ -133,6 +134,7 @@ main {
     }
 
     .container2 {
+        display: flex;
         background: var(--dark-blue);
         height: 20rem;
         width: 75rem;
@@ -157,13 +159,6 @@ main {
             font-weight: 700;
             text-decoration: none;
             color: var(--cyan);
-        }
-
-        img {
-            position: absolute;
-            left: 0;
-            bottom: -10rem;
-            width: 30rem;
         }
     }
 }

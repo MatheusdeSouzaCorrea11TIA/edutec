@@ -201,9 +201,8 @@ main {
     .paginas .swiper{
         display: flex;
         max-width: 75rem;
-        height: auto;
         font-size: 12px;
-
+        height: 35rem;
         .item {
             display: flex;
             flex-direction: column;

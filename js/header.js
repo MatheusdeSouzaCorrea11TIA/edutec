@@ -47,7 +47,8 @@ const footerHTML = `<footer class="rodape">
 
 
 body.insertAdjacentHTML("afterbegin", headerHTML)
-body.insertAdjacentHTML("afterend", footerHTML)
+if (!document.querySelector(".ignoreFooter"))
+    body.insertAdjacentHTML("afterend", footerHTML)
 const header = body.querySelector("header")
 const footer = body.querySelector("footer")
 const mais = header.querySelector("#mais")
