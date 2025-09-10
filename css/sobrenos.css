@@ -2,39 +2,52 @@
 @import url(./header.css);
 
 body {
-    height: 100svh;
     display: flex;
-    justify-content: center;
-    align-items: top;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid rgb(66, 66, 66);
+    width: 125rem;
+    margin-bottom: 2rem;
 }
 
 main {
-    margin-top: 15rem;
-    border: 2px solid red;
+    margin-top: 12rem;
     display: flex;
-    height: 70rem;
     width: 100rem;
+    height: 50rem;
+    margin-bottom: 10rem;
 
     section {
-        margin-top: 7rem;
         width: 40rem;
-        height: 50rem;
-        
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%, 0 100%);
+        height: 100%;
 
-        .container {
-            height: 100%;
+        .container{
             width: 100%;
+            height: calc(100% - 10rem);
             display: flex;
             flex-direction: column;
-            justify-content: top;
+            justify-content: space-between;
             align-items: center;
+            text-align: center;
+            gap: 2rem;
+            padding: 1rem;
+            
+            p{
+                font-size: 10px;
+                font-weight: bold;
+            }
+            h4{
+                font-size: 20px;
+            }
 
             .foto {
-                border: solid 2px red;
-                margin-block: 8rem 2rem;
-                height: 10rem;
-                width: 10rem;
+                margin-block: 2rem;
+                height: 15rem;
+                width: 15rem;
                 border-radius: 50%;
                 object-fit: cover;
             }
@@ -44,20 +57,73 @@ main {
                 flex-direction: row;
             }
         }
+
+        .triangulo{
+            height: 10rem;
+            width: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 100%);
+        }
     }
-    .matheus-box {
+    .matheus-box .container, .matheus-box .triangulo{
         background: var(--matheus-color);
+
+        p{
+            color: #BDD5C0;
+        }
+        .foto{
+            border: 5px solid #779812;
+        }
     }
-    .joao-box {
+    .joao-box .container, .joao-box .triangulo{
         background: var(--joao-color);
+
+        p{
+            color: #2C5238;
+        }
+        .foto{
+            border: 5px solid #C5FB19;
+        }
+        .triangulo {
+            background: var(--joao-color);
+        }
     }
-    .eduardo-box {
+    .eduardo-box .container, .eduardo-box .triangulo{
         background: var(--eduardo-color);
+
+        p{
+            color: #7C8399;
+        }
+        .foto{
+            border: 5px solid white ;
+        }
+        .triangulo {
+            background: var(--eduardo-color);
+        }
     }
-    .ph-box {
+    .ph-box .container, .ph-box .triangulo{
         background: var(--phelipe-color);
+
+        p{
+            color: #3E5E6C;
+        }
+        .foto{
+            border: 5px solid #BDF8FF;
+        }
+        .triangulo {
+            background: var(--phelipe-color);
+        }
     }
-    .hianna-box {
+    .hianna-box .container, .hianna-box .triangulo{
         background: var(--hianna-color);
+
+        p{
+            color: #69ABC7;
+        }
+        .foto{
+            border: 5px solid #1C5577;
+        }
+        .triangulo {
+            background: var(--hianna-color);
+        }
     }
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url(./css/base.css);
+
+        body {
+            background-color: #303030;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            width: 100vw;
+            height: fit-content;
+            padding: 2rem;
+        }
+
+        .pessoa {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 7rem;
+            border: 1px solid white;
+            padding: 0.75rem;
+
+            .profile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            img {
+                width: 6rem;
+            }
+
+            h3, p {
+                color: white;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+    </style>
+    <script src="./js/rankdados.js" defer></script>
+    <title>Ranklist</title>
+</head>
+<body>
+    <div class="container">
+        <div class="pessoa">
+            <div class="profile">
+                <img src="./assets/elementos/Icone -  Profile Picture.svg" alt="Pessoa">
+                <h3>Nome</h3>
+            </div>
+            <p>9999</p>
+        </div>
+    </div>
+</body>
+</html>

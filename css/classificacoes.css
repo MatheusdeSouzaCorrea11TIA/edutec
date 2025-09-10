@@ -1,0 +1,177 @@
+@import url(./base.css);
+@import url(./header.css);
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    section:not(.como-sao, .main) {
+        max-width: 100rem;
+    }
+
+    hr {
+        margin: 5rem auto;
+        border: 1px solid var(--orange);
+        width: 75rem;
+    }
+
+    .main {
+        background-image: url(../assets/classificacoes/BG.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 60rem;
+        width: 100vw;
+        max-width: 192rem;
+
+        .text-box {
+            background-color: var(--blur-gray);
+            height: 100%;
+            width: 55rem;
+
+            h1 {
+                position: relative;
+                top: 35%;
+                left: 16.5rem;
+                font-size: 11rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--white);
+
+                span {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .como-sao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 1.5rem solid var(--almost-lime);
+        height: 15rem;
+        padding: 1rem;
+        margin-block: 7.5rem;
+        margin-inline: 1.5rem auto;
+
+        h2 {
+            font-size: 3.2rem;
+            color: var(--white);
+            span {
+                color: var(--almost-lime);
+            }
+        }
+
+        p {
+            margin-top: 2rem;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+    }
+
+    .como-sao-classificados {
+        display: flex;
+        justify-content: end;
+        text-align: right;
+        margin-right: 7.5rem;
+        gap: 2rem;
+
+        h2 {
+            font-size: 2.4rem;
+            color: var(--white);
+            margin-block: 2rem;
+        }
+
+        p, li {
+            text-align: left;
+            max-width: 30rem;
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            color: var(--white);
+        }
+
+        img {
+            width: 27.5rem; 
+        }
+    }
+
+    .animais-zoologia {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            color: var(--white);
+        }
+        p, li {
+            color: var(--white);
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 3rem;
+        }
+
+        .classificacao-zoologia {
+            margin-inline: auto;
+            max-width: 85rem;
+        }
+
+        .img-tax-imp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .imagens {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    margin-top: 2rem;
+                    height: 10rem;
+                    width: 44rem;
+                    object-fit: cover;
+                }
+                
+                .top {
+                    display: flex;
+                    gap: 2rem;
+
+                    img {
+                        height: 50rem;
+                        width: 12rem;
+                    }
+
+                    img:nth-of-type(2) {
+                        width: 30rem;
+                    }
+                }
+            }
+
+            .taxonomia-importancia {
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+                margin-left: 4rem;
+                max-width: 40rem;
+
+                h2 {
+                    font-size: 2.4rem;
+                    color: var(--almost-lime);
+                }
+            }
+        }
+    }
+
+        
+
+        
+}

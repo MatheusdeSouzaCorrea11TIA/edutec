@@ -54,8 +54,6 @@ const footer = body.querySelector("footer")
 const mais = header.querySelector("#mais")
 const popup = header.querySelector("#popup")
 
-console.log(mais)
-
 mais.addEventListener("click", (e)=> {
     e.preventDefault()
     

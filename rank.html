@@ -5,20 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/rank.css">
   <script src="./js/header.js" defer></script>
+  <script src="./js/rank.js" defer></script>
   <title>Zahoot - Ranking</title>
 </head>
 <body>  
     <main class="ignoreFooter">
-        <section>
-            <div class="container">
-                <div class="ranks">
-                    <h1>Ranking</h1>
-                    <p>Nome</p>
-                    <p>Nome</p>
-                    <p>Nome</p>
-                    <p>Nome</p>
-                    <p>Nome</p>
+        
+        <section class="placar">
+            <h2>Placar</h2>
+            <div>
+                <iframe src="./ranklist.html" frameborder="0" id="rank-list"></iframe>
+            </div>
+        </section>
+
+        <section class="classificacao">
+            <div class="player-container">
+                <div class="coisas">
+                    <img src="./assets/elementos/Icone broto.svg" alt="Ícone de um broto">
+                    <div class="player">
+                        <img src="./assets/elementos/Icone -  Profile Picture.svg" alt="Pessoinha">
+
+                        <h2>Nome</h2>
+                        <p>9999</p>
+                    </div>
+                    <img src="./assets/elementos/Icone DNA.svg" alt="Ícone de um DNA">
                 </div>
+                <hr>
+                <h1>Nome alcançou a melhor pontuação!</h1>
+            </div>
+
+            <div class="buttons">
+                <a href="./gameplay.html" class="jogar-novamente">Jogar novamente</a>
+                <a href="./jogo.html">Voltar</a>
             </div>
         </section>
     </main>

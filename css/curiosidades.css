@@ -1,114 +1,131 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Inter", sans-serif;
-    background: #171518;
-    color: #fff;
-    line-height: 1.6;
-  }
-  
-  /* HEADER */
-  .header {
+@import url(./base.css);
+@import url(./header.css);
+
+body {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px 50px;
-    background: #1e1c20;
-    position: sticky;
-    top: 0;
-  }
-  
-  .header .logo {
-    font-size: 24px;
-  }
-  
-  .header .menu a {
-    margin-left: 20px;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .header .menu a:hover {
-    color: #a1bf46;
-  }
-  
-  /* INTRO */
-  .intro {
-    text-align: center;
-    margin: 50px auto;
-  }
-  
-  .intro h1 {
-    font-size: 36px;
-  }
-  
-  .intro h1 span {
-    color: #a1bf46;
-  }
-  
-  .intro p span {
-    color: #a1bf46;
-  }
-  
-  /* CARDS */
-  .cards {
-    width: 90%;
-    max-width: 1200px;
-    margin: 60px auto;
-  }
-  
-  .cards h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #a1bf46;
-  }
-  
-  .card {
-    background: #59584f;
-    border-radius: 12px;
-    box-shadow: 4px 4px 0px #a1bf46;
-    margin: 20px 0;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .card small {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #ccc;
-  }
-  
-  .card a {
-    color: #a1bf46;
-    text-decoration: none;
-  }
-  
-  .card a:hover {
-    text-decoration: underline;
-  }
-  
-  /* FOOTER */
-  .footer {
-    background: #1e1c20;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #aaa;
-  }
-  
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    section:not(.algumas, .main) {
+      max-width: 100rem;
+    }
+
+    hr {
+        margin: 5rem auto;
+        border: 1px solid var(--orange);
+        width: 75rem;
+    }
+
+    .main {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)) ,url(../assets/curiosidades/BG.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 60rem;
+        width: 100vw;
+        max-width: 192rem;
+
+        .text-box {
+            background-color: var(--blur-gray);
+            height: 100%;
+            width: 55rem;
+
+            h1 {
+                position: relative;
+                top: 35%;
+                left: 11.25rem;
+                font-size: 11rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--white);
+
+                span {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    
+    .algumas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 1.5rem solid var(--almost-lime);
+        height: 15rem;
+        padding: 1rem;
+        margin-block: 7.5rem;
+        margin-inline: 3rem auto;
+
+        h2 {
+            font-size: 3.2rem;
+            color: var(--white);
+            span {
+                color: var(--almost-lime);
+            }
+        }
+
+        p {
+          max-width: 50rem;
+          margin-top: 2rem;
+          color: var(--white);
+          font-size: 1.2rem;
+          span {
+            color: var(--almost-lime);
+          }
+        }
+    }
+    .curiosidades {
+      margin-block: 5rem;
+
+      h2 {
+        font-size: 2.4rem;
+        color: var(--white);
+      }
+
+      .animais-terrestres, 
+      .animais-aquaticos, 
+      .animais-voadores {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+       
+
+        div {
+          background: #59584F;
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 40rem;
+          width: 25rem;
+          box-shadow: 0.5rem 0.5rem 0 var(--almost-lime);
+
+          p {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-block: auto;
+          }
+
+          img {
+            width: auto;
+          }
+        }
+      }
+    }
+}

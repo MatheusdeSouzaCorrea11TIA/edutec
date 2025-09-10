@@ -31,21 +31,27 @@ main img {
     max-width: 192rem;
 
     .text-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: var(--blur-gray);
         height: 100%;
         width: 55rem;
 
         h1 {
-            font-size: 8rem;
-            font-weight: 700;
+            position: relative;
+            top: 35%;
+            left: 30rem;
+            font-size: 11rem;
+            font-weight: 500;
+            text-transform: uppercase;
             color: var(--white);
-
-            span {
-                color: var(--almost-lime);
-                margin-left: 4rem;
+        
+            span:not(.naturais) {
+                opacity: 0.5;
+            }
+        
+            .naturais {
+                position: relative;
+                left: -7.5rem;
+                font-size: 10rem;
             }
         }
     }

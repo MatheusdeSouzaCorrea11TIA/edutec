@@ -64,6 +64,20 @@ main {
 .text-box {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-box .tempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--forest-green);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.6rem;
 }
     
 .container img {
@@ -127,6 +141,124 @@ main {
 
     p {
         font-size: 1.6rem;
+    }
+}
+
+.result-popup {
+    background: rgba(37, 35, 41, 0.475);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #252329;
+        padding: 2rem;
+        border-radius: 2rem;
+        width: 70rem;
+        height: 50rem;
+        z-index: 101;
+
+        img {
+            padding: 2rem;
+            border-radius: 50%;
+            width: 20rem;
+            height: 20rem;
+            border: 0.5rem solid white;
+        }
+        .right {
+            background: var(--forest-green);
+        }
+        .wrong {
+            background: #d33b3b;
+        }
+
+        p {
+            background: var(--gray-purple);
+            padding: 1rem 3rem;
+            border-radius: 0.5rem;
+            color: white;
+        }
+
+        .quantidade-pontos {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        .info {
+            font-size: 1.6rem;
+            margin-top: 5rem;
+        }
+
+        button {
+            background: var(--forest-green);
+            border: none;
+            color: white;
+            margin-top: 3rem;
+            padding: 1rem 4rem;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.exit-popup {
+    background: rgba(37, 35, 41, 0.475);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        background: #252329;
+        padding: 2rem;
+        border-radius: 2rem;
+        width: 40rem;
+        height: 30rem;
+        z-index: 102;
+
+        img {
+            width: 7rem;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 2rem;
+
+            button {
+                padding: 0.75rem 4.5rem;
+                border: none;
+                border-radius: 10rem;
+            }
+
+            #yes {
+                background: var(--lighter-brown);
+                color: var(--forest-green);
+            }
+
+            #no {
+                background: var(--forest-green);
+                color: var(--lighter-brown);
+            }
+        }
     }
 }
 

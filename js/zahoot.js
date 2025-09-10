@@ -4,9 +4,14 @@ const imagem = document.querySelector(".container img")
 const sair = document.getElementById("sair")
 const questaoAtual = document.querySelector(".questao")
 const pontos = document.querySelector(".pontos")
+const resultPopup = document.querySelector(".result-popup")
+const exitPopup = document.querySelector(".exit-popup")
+const tempoText = document.querySelector(".tempo")
 
+let pause = false
 let username = sessionStorage.getItem("username")
 let points = 0
+let multiplier = 0
 let question = 0
 let questions = [
     {
@@ -54,8 +59,8 @@ let questions = [
     {
         desc: "Qual é o maior felino do mundo?",
         img: "../assets/questoes/gato.jpg",
-        alternativas: ["Leão", "Tigre", "Onça pintada", "Leopardo"],
-        correta: 1,
+        alternativas: ["Leão", "Tigre", "Onça pintada", "Ligre"],
+        correta: 4,
         tempo: 10
     }
 
@@ -70,12 +75,17 @@ function trocarPergunta() {
 
     do {
         indexAleatorio = Math.floor(Math.random() * questions.length)
-        if (pastQuestions.length >= 4)
-            break
+        console.log(pastQuestions.length > 0)
+        if (pastQuestions.length >= 5) {
+            win()
+            return
+        }
     } while (pastQuestions.includes(indexAleatorio))
     
     actualQuestion = questions[indexAleatorio]
     pastQuestions.push(indexAleatorio)
+    console.log(pastQuestions)
+    closePopup()
     trocarElementos()
 }
 
@@ -93,33 +103,78 @@ function trocarElementos() {
     }
 }
 
-function adivinhar() {
-    answered = true
-    let multiplier = 500 * (1 - 1/actualTime)
-    pontos += (500 + multiplier)
+function adivinhar(correta) {
+    if (correta) {
+        answered = true
+        multiplier = 500 * (1 - 1/actualTime)
+        points += 500 + Math.floor(multiplier)
+    }
+
+    showPopup(correta)
 }
 
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
         if (button.id === `resposta${actualQuestion.correta}`) {
-            adivinhar()
+            adivinhar(true, "")
         } else {
-            trocarPergunta() // Tirar isso quando terminar
+            adivinhar(false)
         }
     })
 })
 
-function win() {
+function showPopup(correta, info) {
+    resultPopup.classList.remove("hidden")
+    let button = resultPopup.querySelector("#nextQuestion")
+    let pointText = resultPopup.querySelector(".quantidade-pontos")
+    let infoText = resultPopup.querySelector(".info")
+    let rightIMG = resultPopup.querySelector(".right")
+    let wrongIMG = resultPopup.querySelector(".wrong")
 
+    button.addEventListener("click", trocarPergunta)
+    if (correta) {
+        rightIMG.classList.remove("hidden")
+        wrongIMG.classList.add("hidden")
+        infoText.innerHTML = "Resposta Correta!"
+        pointText.innerHTML = "+" + (Math.floor(multiplier) + 500)
+    } else {
+        rightIMG.classList.add("hidden")
+        wrongIMG.classList.remove("hidden")
+        infoText.innerHTML = "Resposta errada! " + info
+        pointText.innerHTML = "+" + 0
+    }
+}
+
+function closePopup() {
+    pause = false
+    resultPopup.classList.add("hidden")
+    exitPopup.classList.add("hidden")
+}
+
+function win() {
+    closePopup()
+    sessionStorage.setItem("points", points)
+    window.location.href = "./rank.html"
 }
 
 function quit() {
-    
+    pause = true
+    exitPopup.classList.remove("hidden")
+    let yes = exitPopup.querySelector("#yes")
+    let no = exitPopup.querySelector("#no")
+
+    yes.addEventListener("click", ()=> window.location.href = "./jogo.html")
+    no.addEventListener("click", closePopup)
 }
 
 trocarPergunta()
 sair.addEventListener("click", quit)
 setInterval(() => {
-    if (!answered)
+    if (!answered && actualTime > 0 && !pause) {
         actualTime -= 0.1
+        tempoText.innerHTML = actualTime.toFixed(0)
+    }
+
+    if (actualTime <= 0)
+        showPopup(false,"Tempo esgotado.")
 }, 100)

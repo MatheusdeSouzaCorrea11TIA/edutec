@@ -22,6 +22,8 @@
                             Como está classificado na taxonomia?<br>
                             Qual sua posição na cadeia alimentar?<br>
                         </p>
+
+                        <p class="tempo">0</p>
                     </div>
                     <img src="./assets/jogo/Imagem - Abelharuco Comum.png" alt="Imagem da questão">
                 </div>
@@ -36,6 +38,31 @@
                 <div class="nivel"><p class="questao">1/0 Perguntas</p> <p class="pontos">Nome | 9999</p></div>
             </div>
         </section>
+
+        <div class="result-popup blur">
+            <div class="container">
+                <img src="./assets/elementos/checkmark.svg" class="right">
+                <img src="./assets/elementos/x-white.svg" class="wrong hidden">
+
+                <p class="info">Resposta Correta!</p>
+                <p class="quantidade-pontos">+0</p>
+
+                <button id="nextQuestion">Proxima</button>
+            </div>
+        </div>
+
+        <div class="exit-popup blur">
+            <div class="container">
+                <img src="./assets/elementos/Exit.svg" class="right">
+
+                <p class="info">Tem certeza que deseja sair?</p>
+
+                <div class="buttons">
+                    <button id="yes">Sim</button>
+                    <button id="no">Não</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
