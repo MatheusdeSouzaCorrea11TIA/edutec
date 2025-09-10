@@ -203,6 +203,7 @@ main {
         max-width: 75rem;
         font-size: 12px;
         height: 35rem;
+        
         .item {
             display: flex;
             flex-direction: column;
