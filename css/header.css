@@ -11,7 +11,7 @@ header {
     align-items: center;
     border-bottom: 2px solid var(--orange);
     height: 10rem;
-    max-width: 124rem;
+    max-width: calc(192rem - 2vw);
     font-size: 14px;
 
     .logo {
