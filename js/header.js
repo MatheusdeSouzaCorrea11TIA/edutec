@@ -30,7 +30,6 @@ const headerHTML = `<header>
             </ul>
         </div>
 
-        <img src="./assets/elementos/detalhe-header.svg" alt="" class="detalhe">
     </header>`
 
 const footerHTML = `<footer class="rodape">

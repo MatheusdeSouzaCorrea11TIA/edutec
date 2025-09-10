@@ -39,7 +39,7 @@ let questions = [
         desc: "Qual é o malefício em destruir o habitat dos animais e como isso influência negativamente no nosso dia a dia?",
         img: "../assets/questoes/queimadas.jpeg",
         alternativas: ["Não existe nenhum malefício, porque os animais conseguem se adaptar facilmente em qualquer ambiente, inclusive nas cidades, então isso não afeta em nada o nosso dia a dia." ,"A destruição do habitat dos animais causa desequilíbrio ambiental, reduz a biodiversidade e aumenta o risco de extinção de espécies. Isso impacta diretamente o ser humano, pois compromete a qualidade do ar, da água, da alimentação e até a saúde, já que favorece a propagação de doenças." , "O maior problema de destruir o habitat dos animais é que ficamos sem lugares para construir prédios e casas, o que atrapalha o crescimento das cidades e dificulta o avanço da tecnologia." , "Destruir o habitat dos animais só influencia negativamente porque deixa o planeta mais feio visualmente, já que sem florestas e natureza não temos lugares bonitos para visitar."],
-        correta: 1,
+        correta: 3,
         tempo: 30
     },
     {

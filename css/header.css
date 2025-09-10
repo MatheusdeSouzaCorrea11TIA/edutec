@@ -36,12 +36,6 @@ header {
         }
     }
 
-    .detalhe {
-        position: absolute;
-        right: 0;
-        top: 15rem;
-    }
-
     #popup {
         background-color: #0000008c;
         border: 2px solid var(--orange);

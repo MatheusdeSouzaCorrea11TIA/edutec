@@ -121,6 +121,8 @@ main {
         }
         .foto{
             border: 5px solid #1C5577;
+            object-position: -1rem;
+            
         }
         .triangulo {
             background: var(--hianna-color);
