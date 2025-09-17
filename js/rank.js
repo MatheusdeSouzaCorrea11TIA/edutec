@@ -17,6 +17,8 @@ fetch(`${backendHTML}get-points`)
 .catch(error => console.error("Fetch error:", error))
 
 function maiorPontuacao(data) {
+    if (username === "teste") return
+
     let maior = 0
     for (let i = 0; i < data.length; i++) {
         if (data[i].ponto > maior) {

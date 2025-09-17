@@ -54,11 +54,18 @@ main {
     justify-content: space-between;
 }
 
-.container {
+.question-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 40vh;
+}
+
+.question-container img {
+    width: 50%;
     height: 100%;
+    object-fit: cover;
+    object-position: 0rem -10rem;
 }
 
 .text-box {
@@ -79,12 +86,6 @@ main {
     font-weight: 700;
     font-size: 1.6rem;
 }
-    
-.container img {
-    max-width: 22.5rem;
-    height: auto;
-    object-fit: contain;
-}
 
 .perguntas {
     display: grid;
@@ -94,7 +95,7 @@ main {
     align-items: center;
     gap: 1rem 2rem;
     margin-top: 5rem;
-    height: 100%;
+    height: 15rem;
 }
 
 .perguntas button {

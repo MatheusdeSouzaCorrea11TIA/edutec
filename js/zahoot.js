@@ -1,6 +1,6 @@
 const buttons = document.querySelector(".perguntas").querySelectorAll("button")
 const descricao = document.getElementById("descricao")
-const imagem = document.querySelector(".container img")
+const imagem = document.querySelector(".question-container img")
 const sair = document.getElementById("sair")
 const questaoAtual = document.querySelector(".questao")
 const pontos = document.querySelector(".pontos")
@@ -78,7 +78,6 @@ function trocarPergunta() {
 
     do {
         indexAleatorio = Math.floor(Math.random() * questions.length)
-        console.log(pastQuestions.length > 0)
         if (pastQuestions.length >= 5) {
             win()
             return
@@ -87,7 +86,6 @@ function trocarPergunta() {
     
     actualQuestion = questions[indexAleatorio]
     pastQuestions.push(indexAleatorio)
-    console.log(pastQuestions)
     closePopup()
     trocarElementos()
 }
@@ -109,7 +107,7 @@ function trocarElementos() {
 function adivinhar(correta) {
     if (correta) {
         answered = true
-        multiplier = 500 * (1 - 1/actualTime)
+        multiplier = actualTime !== actualQuestion.tempo ?  Math.max(0, 500 * (1 - 1/actualTime)) : multiplier = 500
         points += 500 + Math.floor(multiplier)
     }
 
@@ -121,7 +119,7 @@ buttons.forEach((button) => {
         if (button.id === `resposta${actualQuestion.correta}`) {
             adivinhar(true, "")
         } else {
-            adivinhar(false)
+            adivinhar(false, "")
         }
     })
 })
