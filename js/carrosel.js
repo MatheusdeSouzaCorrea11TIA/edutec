@@ -17,7 +17,7 @@ function createSlider() {
         loop: false,
         parallax: true,
         autoHeight: false,
-        slidesPerView: 2.5,
+        slidesPerView: 3.35,
         spaceBetween: 30,
         allowTouchMove: true,
       });
