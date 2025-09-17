@@ -16,6 +16,7 @@ header {
 
     .logo {
         width: 8rem;
+        margin-left: 1.5rem;
     }
 
     ul {
@@ -24,7 +25,7 @@ header {
 
     .links .nav-menu-list {
         display: flex;
-        margin-right: 3rem;
+        margin-right: 1.5rem;
     }
 
     .nav-menu-item {
