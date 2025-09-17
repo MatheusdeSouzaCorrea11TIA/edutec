@@ -1,4 +1,4 @@
-fetch('./api/getData')
+fetch('/api/getData?nome=Matheus')
   .then(res => res.json())
   .then(data => {
     console.log('Ranking:', data);

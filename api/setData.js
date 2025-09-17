@@ -1,18 +1,21 @@
 import { setPoints } from '../js/server.js';
 
-
 export default async function handler(req, res) {
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Método não permitido' })
+    }
+
     try {
-        const { nome, pontos } = req.body;
+        const { nome, pontos } = req.body
 
         if (!nome || pontos === undefined) {
-            return res.status(400).json({ error: 'Nome e pontos são obrigatórios'})
+            return res.status(400).json({ error: 'Nome e pontos são obrigatórios' })
         }
 
-        await setPoints(nome, pontos);
-        res.status(200).json({ mensagem: 'Pontos salvos com sucesso' });
+        await setPoints(nome, pontos)
+        res.status(200).json({ mensagem: 'Pontos salvos com sucesso' })
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Erro ao buscar ranking' });
+        console.log(err)
+        res.status(500).json({ error: 'Erro ao salvar pontos' })
     }
 }

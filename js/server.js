@@ -1,6 +1,6 @@
 const mysql = require("mysql2/promise");
 
-async function getPoints() {
+async function getPoints(nome) {
     const connection = mysql.createConnection({
         host: 'benserverplex.ddns.net',
         user: 'alunos',
@@ -8,9 +8,11 @@ async function getPoints() {
         database: 'pontuacao_zahoot'
     })
     
-    const [rows] = await connection.execute('SELECT * FROM pontucacao');
+    const [rows] = await connection.execute(
+        'SELECT * FROM pontucacao WHERE nome',
+        [nome]
+    );
     await connection.end();
-
     return rows
 }
 
