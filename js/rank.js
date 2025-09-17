@@ -24,20 +24,22 @@ function maiorPontuacao(data) {
     }
 
     if (points >= maior) {
-        h1.innerHTML = `Parabéns, ${username} alcançou a melhor pontuação`
+        h1.innerHTML = `Parabéns ${username}, você alcançou a melhor pontuação!`
     } else {
-        h1.innerHTML = `Parabéns, ${username}`
+        h1.innerHTML = `Parabéns, ${username}, uma ótima pontuação!`
     }
 
-    fetch('http://localhost:3333/get-points', {
+    fetch('http://localhost:3333/set-points', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
-        body: { username, points }
-
+        body: JSON.stringify({ nome: username, pontos: points })
     })
-    .then(res => res.json())
-    .then(data => maiorPontuacao(data))
-    .catch(error => console.error("Fetch error:", error))
+    .then(response => {
+        if (!response.ok) throw new Error('Erro na requisição')
+            return response.json()
+    })
+    .then(data => console.log('Resposta da API:',data))
+    .catch(error => console.log("Erro:", error))
 }
