@@ -1,7 +1,7 @@
-let nome = sessionStorage.getItem("username")
+let username = sessionStorage.getItem("username")
 let pontos = sessionStorage.getItem("points")
 
-fetch('/api/setData?nome=Matheus', {
+fetch('/api/setData', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ nome, pontos })
