@@ -1,3 +1,9 @@
+
+fetch(url, {
+    method: "POST",
+    headers: "Content-type"
+})
+
 function createSlider() {
     let swippers = []
 
