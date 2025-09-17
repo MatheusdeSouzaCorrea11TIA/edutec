@@ -9,8 +9,9 @@ const jogarNovamente = document.getElementById("jogar-novamente")
 nameLabel.innerHTML = username
 pointsLabel.innerHTML = points
 
+let backendHTML = 'https://zahoot-score.vercel.app/'
 
-fetch('http://localhost:3333/get-points')
+fetch(`${backendHTML}get-points`)
 .then(res => res.json())
 .then(data => maiorPontuacao(data))
 .catch(error => console.error("Fetch error:", error))
@@ -29,7 +30,7 @@ function maiorPontuacao(data) {
         h1.innerHTML = `Parabéns, ${username}, uma ótima pontuação!`
     }
 
-    fetch('http://localhost:3333/set-points', {
+    fetch(`${backendHTML}set-points`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"

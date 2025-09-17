@@ -8,7 +8,9 @@ const pessoaTemplate = `<div class="pessoa">
 <p>9999</p>
 </div>`
 
-fetch('http://localhost:3333/get-points')
+let backendHTML = 'https://zahoot-score.vercel.app/'
+
+fetch(`${backendHTML}get-points`)
 .then(res => res.json())
 .then(data => createScore(data))
 .catch(error => console.error("Fetch error:", error))
