@@ -1,8 +1,11 @@
+fetch('http://localhost:3333/get-points')
+.then(res => res.json())
+.then(data => createScore(data))
+.catch(error => console.error("Fetch error:", error))
 
-fetch(url, {
-    method: "POST",
-    headers: "Content-type"
-})
+function createScore(data) {
+  console.log(data)
+}
 
 function createSlider() {
     let swippers = []
