@@ -1,8 +1,125 @@
 @import url(./base.css);
 @import url(./header.css);
 
+:root {
+    font-size: 62.5%;
+
+    --bg-black: #171619;
+    --light-brown: #E9D5C4;
+    --lighter-brown: #FEFAE1;
+    --blur-gray: rgb(199, 199, 199,0.22);
+    --gray-purple: #43404A;
+    --orange: #DAA062;
+    --yelled-gray: #727065;
+    --almost-lime: #A2BF46;
+    --lime: #8bd629;
+    --forest-green: #606C38;
+    --dark-green: #2B311A;
+    --cyan: #00E6FF;
+    --turquoise: #13AEBF;
+    --dark-blue: #0D1E28;
+    --white: #FFF;
+
+    --matheus-color: #566134;
+    --joao-color: #A2BF46;
+    --eduardo-color: #FEFAE1;
+    --phelipe-color: #00E6FF;
+    --hianna-color: #1A4660;
+}
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: calc(100svh - 10rem);
 }
 
+main section {
+    border: 1px solid var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    width: 70rem;
+    height: 50rem;
+
+    h1 {
+        color: var(--almost-lime);
+    }
+
+    .login, .cadastro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        a {
+            text-decoration: none;
+            color: var(--almost-lime);
+        }
+
+        button {
+            background: var(--almost-lime);
+            border: none;
+            padding: 1rem 7rem;
+        }
+    }
+
+    .login {
+        gap: 3rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .input-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                margin-right: 1rem;
+            }
+
+            input {
+                border: 1px solid var(--white);
+                background: none;
+                padding: 1rem;
+            }
+        }
+    }
+
+    .overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+
+        width: 35rem;
+        height: 50rem;
+        background: var(--almost-lime);
+        padding: 1rem;
+
+        p {
+            text-align: center;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+
+        #alternate-divs {
+            border: 1px solid var(--white);
+            background: none;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            color: var(--white);
+        }
+    }
+}
