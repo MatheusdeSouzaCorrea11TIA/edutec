@@ -47,6 +47,10 @@ main section {
         color: var(--almost-lime);
     }
 
+    button:hover {
+        cursor: pointer;
+    }
+
     .login, .cadastro {
         display: flex;
         flex-direction: column;
@@ -86,6 +90,7 @@ main section {
             }
 
             input {
+                color: var(--white);
                 border: 1px solid var(--white);
                 background: none;
                 padding: 1rem;
@@ -100,7 +105,6 @@ main section {
         gap: 5rem;
         align-items: center;
         position: absolute;
-        left: 50%;
 
         width: 35rem;
         height: 50rem;
@@ -121,5 +125,48 @@ main section {
             border-radius: 1rem;
             color: var(--white);
         }
+    }
+}
+
+.right {
+    animation: right 1s ease forwards;
+}
+
+.left {
+    animation: left 1s ease forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 1s;
+}
+
+.fadeOut {
+    animation: fadeOut 1s;
+}
+
+@keyframes right {
+    from {
+        transform: translate(-50%);
+    }
+    to {
+        transform: translate(50%);
+    }
+}
+
+@keyframes left {
+    from {
+        transform: translate(50%);
+    }
+    to {
+        transform: translate(-50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
