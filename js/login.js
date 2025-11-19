@@ -5,18 +5,22 @@ const loginDiv = document.querySelector(".login")
 const cadastroDiv = document.querySelector(".cadastro")
 
 alternate.addEventListener("click", ()=> {
-    if (overlay.classList.contains("right")) {
-        overlay.classList.add("left")
-        overlay.classList.remove("right")
-
-        loginDiv.classList.add("fadeOut")
-        cadastroDiv.classList.remove("fadeOut")
+    if (overlay.classList.contains("left")) {
+        alternateDivs("right","left", false)
     } else {
-        overlay.classList.add("right")
-        overlay.classList.remove("left")
-
-        loginDiv.classList.add("fadeIn")
-
-        cadastroDiv.classList.add("fadeOut")
+        alternateDivs("left","right", true)
     }
 })
+
+function alternateDivs(addClass, removeClass, addFade) {
+    overlay.classList.add(addClass)
+    overlay.classList.remove(removeClass)
+    
+    if (addFade) {
+        loginDiv.classList.remove("fadeIn")
+        cadastroDiv.classList.add("fadeIn")
+    } else {
+        loginDiv.classList.add("fadeIn")
+        cadastroDiv.classList.remove("fadeIn")
+    }
+}

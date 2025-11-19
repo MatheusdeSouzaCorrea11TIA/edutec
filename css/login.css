@@ -39,7 +39,7 @@ main section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     width: 70rem;
     height: 50rem;
 
@@ -71,13 +71,14 @@ main section {
         }
     }
 
-    .login {
-        gap: 3rem;
-    }
+    .login { gap: 3rem; }
+    .cadastro { gap: 2rem; }
 
     .container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 1rem;
 
         .input-box {
@@ -86,7 +87,8 @@ main section {
             align-items: center;
 
             img {
-                margin-right: 1rem;
+                width: 2rem;
+                margin-inline: 1rem;
             }
 
             input {
@@ -95,7 +97,15 @@ main section {
                 background: none;
                 padding: 1rem;
             }
+
+            input::-webkit-calendar-picker-indicator {
+                filter: invert(100%);
+            }
         }
+    }
+
+    #data {
+        width: 20.5rem;
     }
 
     .overlay {
@@ -105,6 +115,7 @@ main section {
         gap: 5rem;
         align-items: center;
         position: absolute;
+        transform: translate(50%);
 
         width: 35rem;
         height: 50rem;
@@ -137,11 +148,11 @@ main section {
 }
 
 .fadeIn {
-    animation: fadeIn 1s;
+    animation: fadeIn 1.25s;
 }
 
 .fadeOut {
-    animation: fadeOut 1s;
+    animation: fadeOut 1.25s;
 }
 
 @keyframes right {
@@ -162,7 +173,7 @@ main section {
     }
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
