@@ -1,23 +1,24 @@
-const username = sessionStorage.getItem("username")
-const points = sessionStorage.getItem("points")
+const { name, pontuacao } = sessionStorage.getItem("user")
 
 const nameLabel = document.querySelector(".player h2")
 const pointsLabel = document.querySelector(".player p")
 const h1 = document.querySelector("h1")
 const jogarNovamente = document.getElementById("jogar-novamente")
 
-nameLabel.innerHTML = username
-pointsLabel.innerHTML = points
+nameLabel.innerHTML = name
+pointsLabel.innerHTML = pontuacao
 
-let backendHTML = 'https://zahoot-score.vercel.app/'
+const backendHTML = "http://localhost:3333"
 
-fetch(`${backendHTML}get-points`)
-.then(res => res.json())
-.then(data => maiorPontuacao(data))
-.catch(error => console.error("Fetch error:", error))
+async function getData() {
+    const response = await fetch(`${backendHTML}/get-points`)
+    .then(response => response.json())
 
-function maiorPontuacao(data) {
-    if (username === "teste") return
+    maiorPontuacao(response)
+}
+
+async function maiorPontuacao(data) {
+    if (name === "teste") return
 
     let maior = 0
     for (let i = 0; i < data.length; i++) {
@@ -26,23 +27,20 @@ function maiorPontuacao(data) {
         }
     }
 
-    if (points >= maior) {
-        h1.innerHTML = `Parabéns ${username}, você alcançou a melhor pontuação!`
+    if (pontuacao >= maior) {
+        h1.innerHTML = `Parabéns ${name}, você alcançou a melhor pontuação!`
     } else {
-        h1.innerHTML = `Parabéns, ${username}, uma ótima pontuação!`
+        h1.innerHTML = `Parabéns, ${name}, uma ótima pontuação!`
     }
 
-    fetch(`${backendHTML}set-points`, {
+    const response = await fetch(`${backendHTML}/set-points`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ nome: username, pontos: points })
+        body: JSON.stringify({ nome: name, pontos: pontuacao })
     })
-    .then(response => {
-        if (!response.ok) throw new Error('Erro na requisição')
-            return response.json()
-    })
-    .then(data => console.log('Resposta da API:',data))
-    .catch(error => console.log("Erro:", error))
+    .then(response => response.json())
 }
+
+getData()

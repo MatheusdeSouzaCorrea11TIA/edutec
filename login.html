@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/header.js" defer></script>
-    <script src="./js/login.js" defer></script>
     <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js" defer></script>
     <title>Zurrazard - Login</title>
 </head>
 <body>
     <main>
         <section>
-            <div class="login">
+            <form class="login">
                 <h1>Login</h1>
 
                 <img src="./assets/elementos/Icone -  Profile Picture.svg" alt="">
@@ -19,20 +18,20 @@
                 <div class="container">
                     <div class="input-box">
                         <img src="./assets/elementos/person-icon.svg" alt="Ícone de Pessoa">
-                        <input type="text" id="username" placeholder="Nome de usuário/email">
+                        <input type="text" id="username-login" placeholder="Nome de usuário/email">
                     </div>
     
                     <div class="input-box">
                         <img src="./assets/elementos/lock-icon.svg" alt="Ícone de cadeado">
-                        <input type="password" id="password" placeholder="Senha">
+                        <input type="password" id="password-login" placeholder="Senha">
                     </div>
                     <a href="">Esqueceu a senha?</a>
                 </div>
 
                 <button id="login">Login</button>
-            </div>
+            </form>
 
-            <div class="cadastro">
+            <form class="cadastro">
                 <h1>Cadastro</h1>
 
                 <img src="./assets/elementos/Icone -  Profile Picture.svg" alt="">
@@ -40,7 +39,7 @@
                 <div class="container">
                     <div class="input-box">
                         <img src="./assets/elementos/person-icon.svg" alt="Ícone de Pessoa">
-                        <input type="text" id="username" placeholder="Nome de usuário">
+                        <input type="text" id="username-signup" placeholder="Nome de usuário">
                     </div>
     
                     <div class="input-box">
@@ -50,18 +49,22 @@
     
                     <div class="input-box">
                         <img src="./assets/elementos/lock-icon.svg" alt="Ícone de Cadeado">
-                        <input type="password" id="password" placeholder="Senha">
+                        <input type="password" id="password-signup" placeholder="Senha">
                     </div>
     
                     <div class="input-box">
                         <img src="./assets/elementos/cake-icon.svg" alt="Ícone de Bolo">
-                        <input type="date" id="data" placeholder="Data">
+                        <div class="data-inputs">
+                            <input type="number" id="day" placeholder="Dia" max="31">
+                            <input type="number" id="month" placeholder="Mês" max="12">
+                            <input type="number" id="year" placeholder="Ano" min="1926" max="2026">
+                        </div>
                     </div>
                 </div>
 
-                <button id="signin">Cadastro</button>
-            </div>
-
+                <button id="sign-up">Cadastro</button>
+            </form>
+            
             <div class="overlay">
                 <img src="./assets/elementos/logo.svg" alt="Logo Zurrazard">
                 <p>Não tem uma conta? <br> Cadastre-se agora!</p>

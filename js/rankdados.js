@@ -1,5 +1,5 @@
-let nome = sessionStorage.getItem("username")
-let pontos = sessionStorage.getItem("points")
+const { name, pontuacao } = sessionStorage.getItem("user")
+
 const pessoaTemplate = `<div class="pessoa">
 <div class="profile">
     <img src="./assets/elementos/Icone -  Profile Picture.svg" alt="Pessoa">
@@ -8,12 +8,14 @@ const pessoaTemplate = `<div class="pessoa">
 <p>9999</p>
 </div>`
 
-let backendHTML = 'https://zahoot-score.vercel.app/'
+const backendHTML = 'http://localhost:3333'
 
-fetch(`${backendHTML}get-points`)
-.then(res => res.json())
-.then(data => createScore(data))
-.catch(error => console.error("Fetch error:", error))
+async function getData() {
+  const reponse = await fetch(`${backendHTML}/get-points`)
+  .then(response => response.json())
+
+  createScore(reponse)
+}
 
 function createScore(data) {
   const holder = document.querySelector(".container")
@@ -24,9 +26,11 @@ function createScore(data) {
     temp.innerHTML = pessoaTemplate
 
     const pessoaElement = temp.firstElementChild
-    pessoaElement.querySelector("h3").innerHTML = data[i].nome
-    pessoaElement.querySelector("p").innerHTML = data[i].ponto
+    pessoaElement.querySelector("h3").innerHTML = data[i].name
+    pessoaElement.querySelector("p").innerHTML = data[i].pontuacao
 
     holder.appendChild(pessoaElement)
   }
 }
+
+getData()

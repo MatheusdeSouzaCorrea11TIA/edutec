@@ -16,25 +16,27 @@ const headerHTML = `<header>
                 <a href="" id="mais">
                     Mais
                     <img src="./assets/images/icons/Arrow.svg" alt="">
+                    <div id="popup" class="hiddenPopup">
+                        <ul class="nav-popup-list">
+                            <li class="nav-popup-item"><a href="./classificacoes.html">Classificações</a></li> <hr>
+                            <li class="nav-popup-item"><a href="./curiosidades.html">Curiosidades</a></li> <hr>
+                            <li class="nav-popup-item"><a href="./sobrenos.html">Sobre Nós</a></li> <hr>
+                            <li class="nav-popup-item"><a href="./jogo.html">Zahoot!</a></li>
+                        </ul>
+                    </div>
                 </a>
             </li>
             <li class="nav-menu-item">
+                <div id="user-header">
+                    <img src="./assets/elementos/Icone -  Profile Picture.svg" alt="">
+                    <span>Matheus</span>
+                </div>
                 <a href="./login.html" id="nav-login-button">
                     Login
                 </a>
             </li>
         </ul>
     </div>
-
-    <div id="popup" class="hiddenPopup">
-        <ul class="nav-popup-list">
-            <li class="nav-popup-item"><a href="./classificacoes.html">Classificações</a></li> <hr>
-            <li class="nav-popup-item"><a href="./curiosidades.html">Curiosidades</a></li> <hr>
-            <li class="nav-popup-item"><a href="./sobrenos.html">Sobre Nós</a></li> <hr>
-            <li class="nav-popup-item"><a href="./jogo.html">Zahoot!</a></li>
-        </ul>
-    </div>
-
 </header>`
 
 const footerHTML = `<footer class="rodape">
@@ -66,3 +68,17 @@ mais.addEventListener("click", (e)=> {
     else
         popup.classList.add("hiddenPopup")
 })
+
+async function autoLogin() {
+    const loginButton = document.getElementById("nav-login-button")
+    const userDiv = document.getElementById("user-header")
+    const { name, pontuacao } = sessionStorage.getItem("user")
+
+    const nameLabel = userDiv.querySelector("span")
+    nameLabel.innerHTML = name
+
+    userDiv.style.display = "flex"
+    loginButton.style.display = "none"
+}
+
+autoLogin()

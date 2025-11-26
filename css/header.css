@@ -29,11 +29,30 @@ header {
     }
 
     .nav-menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-inline: 1rem;
 
         a {
             color: var(--white);
             text-decoration: none;
+        }
+
+        #user-header {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            img {
+                width: 5rem;
+            }
+            span {
+                color: var(--white);
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
         }
     }
 
@@ -50,7 +69,6 @@ header {
         position: absolute;
         width: fit-content;
         height: fit-content;
-        right: 0.75rem;
         top: 7rem;
         z-index: 99;
 
