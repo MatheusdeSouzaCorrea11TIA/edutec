@@ -40,11 +40,17 @@ header {
         }
 
         #user-header {
+            background: rgb(233, 213, 196,0.25);
+            backdrop-filter: blur(3px);
+            border: 0.15rem solid var(--light-brown);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
             display: none;
             justify-content: center;
             align-items: center;
             gap: 1rem;
             width: 100%;
+
             img {
                 width: 5rem;
             }
@@ -53,6 +59,13 @@ header {
                 font-size: 1.6rem;
                 font-weight: 700;
             }
+            transition: all 0.25s;
+        }
+
+        #user-header:hover {
+            background: rgb(233, 213, 196,0.2);
+            backdrop-filter: blur(1px);
+            cursor: pointer;
         }
     }
 
@@ -63,7 +76,7 @@ header {
         border-radius: 1rem;
     }
 
-    #popup {
+    #maisPopup {
         background-color: #0000008c;
         border: 2px solid var(--orange);
         position: absolute;
@@ -97,9 +110,52 @@ header {
         }
     }
 
-    .hiddenPopup {
-        display: none;
+    #userPopup {
+        position: absolute;
+        top: 9rem;
+        z-index: 99;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: #0000008c;
+            backdrop-filter: blur(3px);
+            border: 0.2rem solid var(--bg-black);
+            gap: 1rem;
+            padding: 1.25rem;
+            width: max-content;
+            color: var(--white);
+        }
+
+        hr {
+            width: 80%;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            gap: 1rem;
+            border: 1px solid var(--lighter-brown);
+            border-radius: 0.5rem;
+            background: #0000008c;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--white);
+
+            img {
+                width: 2rem;
+            }
+        }
+
     }
+}
+
+.hiddenPopup {
+    display: none;
 }
 
 .rodape {

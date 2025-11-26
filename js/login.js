@@ -9,16 +9,16 @@ const signUpBtn = document.getElementById("sign-up")
 const backendHTML = "http://localhost:3333"
 
 async function Login() {
-    const username = document.getElementById("username-login").value
+    const usernameVal = document.getElementById("username-login").value
     const password = document.getElementById("password-login").value
 
-    if (username === "" || password === "") {
+    if (usernameVal === "" || password === "") {
         alert("Por favor insira o nome de usuário e a senha!")
         return
     }
 
     const user = {
-        username,
+        usernameVal,
         password
     }
 
@@ -30,13 +30,15 @@ async function Login() {
         body: JSON.stringify({ user })
     }).then(response => response.json())
 
-    if (response.message) {
-        alert(response.message)
+    if (response.error) {
+        alert(response.error)
         return
     }
 
-    const { id, name, pontuacao } = response
-    sessionStorage.setItem("user", JSON.stringify({ id, name, pontuacao }))
+    const { id, username, pontuacao } = response
+    sessionStorage.setItem("user", JSON.stringify({ id: id, username: username, pontuacao: pontuacao }))
+    alert(response.message)
+    window.location.href = "./index.html"
 }
 
 async function SignUp() {
@@ -69,7 +71,7 @@ async function SignUp() {
         return
     }
 
-    sessionStorage.setItem("user", { id: response.id, name: username, pontuacao: 0})
+    sessionStorage.setItem("user", { id: response.id, username: response.username, pontuacao: 0})
     alert(response.message)
 
     window.location.href = "./index.html"
@@ -84,11 +86,17 @@ function alternateDivs(addClass, removeClass, addFade) {
         loginDiv.classList.remove("fadeOut")
         cadastroDiv.classList.add("fadeOut")
         cadastroDiv.classList.remove("fadeIn")
+
+        overlay.querySelector("p").innerHTML = "Não tem uma conta? <br> Cadastre-se agora!"
+        overlay.querySelector("button").innerHTML = "Cadastro"
     } else { //Vai para esquerda
         loginDiv.classList.add("fadeOut")
         loginDiv.classList.remove("fadeIn")
         cadastroDiv.classList.add("fadeIn")
         cadastroDiv.classList.remove("fadeOut")
+
+        overlay.querySelector("p").innerHTML = "Já tem uma conta? <br> Faça Login!"
+        overlay.querySelector("button").innerHTML = "Login"
     }
 }
 

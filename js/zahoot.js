@@ -8,8 +8,8 @@ const resultPopup = document.querySelector(".result-popup")
 const exitPopup = document.querySelector(".exit-popup")
 const tempoText = document.querySelector(".tempo")
 
+const { username } = JSON.parse(sessionStorage.getItem("user"))
 let pause = false
-let username = sessionStorage.getItem("username")
 let points = 0
 let multiplier = 0
 let question = 0
@@ -179,3 +179,8 @@ setInterval(() => {
     if (actualTime <= 0)
         showPopup(false,"Tempo esgotado.")
 }, 100)
+
+if (!username) {
+    alert("Não sei como vc chegou aqui, mas é necessário fazer login para jogar!\n Faça agora >:(")
+    window.location.href = "./jogo.html"
+}

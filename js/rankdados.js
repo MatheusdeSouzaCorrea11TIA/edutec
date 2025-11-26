@@ -1,4 +1,5 @@
-const { name, pontuacao } = sessionStorage.getItem("user")
+const { name } = JSON.parse(sessionStorage.getItem("user"))
+const pontuacao = sessionStorage.getItem("points")
 
 const pessoaTemplate = `<div class="pessoa">
 <div class="profile">

@@ -1,11 +1,12 @@
-const { name, pontuacao } = sessionStorage.getItem("user")
+const { username } = JSON.parse(sessionStorage.getItem("user"))
+const pontuacao = sessionStorage.getItem("points")
 
 const nameLabel = document.querySelector(".player h2")
 const pointsLabel = document.querySelector(".player p")
 const h1 = document.querySelector("h1")
 const jogarNovamente = document.getElementById("jogar-novamente")
 
-nameLabel.innerHTML = name
+nameLabel.innerHTML = username
 pointsLabel.innerHTML = pontuacao
 
 const backendHTML = "http://localhost:3333"
@@ -18,7 +19,7 @@ async function getData() {
 }
 
 async function maiorPontuacao(data) {
-    if (name === "teste") return
+    if (username === "teste") return
 
     let maior = 0
     for (let i = 0; i < data.length; i++) {
@@ -28,9 +29,9 @@ async function maiorPontuacao(data) {
     }
 
     if (pontuacao >= maior) {
-        h1.innerHTML = `Parabéns ${name}, você alcançou a melhor pontuação!`
+        h1.innerHTML = `Parabéns ${username}, você alcançou a melhor pontuação!`
     } else {
-        h1.innerHTML = `Parabéns, ${name}, uma ótima pontuação!`
+        h1.innerHTML = `Parabéns, ${username}, uma ótima pontuação!`
     }
 
     const response = await fetch(`${backendHTML}/set-points`, {
@@ -38,9 +39,8 @@ async function maiorPontuacao(data) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ nome: name, pontos: pontuacao })
-    })
-    .then(response => response.json())
+        body: JSON.stringify({ username: username, pontuacao: pontuacao })
+    }).then(response => response.json())
 }
 
 getData()
