@@ -69,12 +69,15 @@ mais.addEventListener("click", (e)=> {
         popup.classList.add("hiddenPopup")
 })
 
-async function autoLogin() {
+function autoLogin() {
     const loginButton = document.getElementById("nav-login-button")
     const userDiv = document.getElementById("user-header")
-    const { name, pontuacao } = sessionStorage.getItem("user")
-
+    const user = sessionStorage.getItem("user")
+    
+    if (!user) return
+    const { name, pontuacao } = user
     const nameLabel = userDiv.querySelector("span")
+    
     nameLabel.innerHTML = name
 
     userDiv.style.display = "flex"

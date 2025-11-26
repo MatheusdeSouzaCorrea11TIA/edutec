@@ -131,3 +131,14 @@ p {
         font-size: 1.2rem;
     }
 }
+
+.nickname {
+    padding: 0 3rem;
+    border-bottom: 1px solid white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
