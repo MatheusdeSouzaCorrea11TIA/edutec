@@ -9,7 +9,7 @@ const jogarNovamente = document.getElementById("jogar-novamente")
 nameLabel.innerHTML = username
 pointsLabel.innerHTML = pontuacao
 
-const backendHTML = "http://localhost:3333"
+const backendHTML = "https://zahoot-score.vercel.app"
 
 async function getData() {
     const response = await fetch(`${backendHTML}/get-points`)

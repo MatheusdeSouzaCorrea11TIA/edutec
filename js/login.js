@@ -6,7 +6,7 @@ const cadastroDiv = document.querySelector(".cadastro")
 const loginBtn = document.getElementById("login")
 const signUpBtn = document.getElementById("sign-up")
 
-const backendHTML = "http://localhost:3333"
+const backendHTML = "https://zahoot-score.vercel.app"
 
 async function Login() {
     const usernameVal = document.getElementById("username-login").value

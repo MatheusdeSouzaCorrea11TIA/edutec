@@ -9,7 +9,7 @@ const pessoaTemplate = `<div class="pessoa">
 <p>9999</p>
 </div>`
 
-const backendHTML = 'http://localhost:3333'
+const backendHTML = 'https://zahoot-score.vercel.app'
 
 async function getData() {
   const reponse = await fetch(`${backendHTML}/get-points`)

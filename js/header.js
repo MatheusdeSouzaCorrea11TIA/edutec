@@ -132,7 +132,7 @@ deletar.addEventListener("click", async () => {
 
     const user = JSON.parse(sessionStorage.getItem("user"))
 
-    const response = await fetch('http://localhost:3333/remove-account', {
+    const response = await fetch('https://zahoot-score.vercel.app/remove-account', {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json"
