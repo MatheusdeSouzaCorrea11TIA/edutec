@@ -51,6 +51,11 @@ async function SignUp() {
     const year = document.getElementById("year").value
     const birthday = `${year}/${month}/${day}` //Invertido por causa do MySQL
 
+    if (password.split("").length < 8) {
+        alert("A senha deve conter pelo menos 8 caracteres")
+        return
+    }
+
     const user = {
         username,
         email,
@@ -71,7 +76,7 @@ async function SignUp() {
         return
     }
 
-    sessionStorage.setItem("user", { id: response.id, username: response.username, pontuacao: 0})
+    sessionStorage.setItem("user", JSON.stringify({ id: response.id, username: response.username, pontuacao: 0}))
     alert(response.message)
 
     window.location.href = "./index.html"
